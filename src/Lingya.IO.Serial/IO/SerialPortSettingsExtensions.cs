@@ -62,9 +62,7 @@ namespace Lingya.IO{
             port.DtrEnable = setting.Dtr;
             port.RtsEnable = setting.Rts;
             //port.DsrHolding = true;
-            if (isOpened) {
-                port.Open();
-            }
+            port.Open();
 
             return port;
         }
