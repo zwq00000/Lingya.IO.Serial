@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="Lingya.Views.PortSettingControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:io="clr-namespace:Lingya.IO"
+             mc:Ignorable="d" d:DataContext="{d:DesignInstance io:SerialPortSetting}"
+             d:DesignHeight="360" d:DesignWidth="400">
+    <StackPanel Orientation="Vertical" Margin="16">
+        <StackPanel.Resources>
+            <Style x:Key="EditorStyle">
+                <Setter Property="FrameworkElement.Margin" Value="4"></Setter>
+            </Style>
+            <Style TargetType="TextBox" BasedOn="{StaticResource EditorStyle}">
+            </Style>
+            <Style TargetType="ComboBox" BasedOn="{StaticResource EditorStyle}">
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="Width" Value="64"/>
+                <Setter Property="Margin" Value="4"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+            </Style>
+            <Style TargetType="DockPanel">
+                <Setter Property="Margin" Value="4"/>
+            </Style>
+        </StackPanel.Resources>
+
+        <DockPanel>
+            <Label Margin="4" Content="端  口"></Label>
+            <ComboBox SelectedValue="{Binding PortName}" ItemsSource="{x:Static io:PortSettingConst.PortNames}"/>
+        </DockPanel>
+        <DockPanel>
+            <Label>波特率</Label>
+            <ComboBox SelectedValue="{Binding BaudRate}" ItemsSource="{x:Static io:PortSettingConst.BaudrateList}"/>
+        </DockPanel>
+        <DockPanel>
+            <Label>数据位</Label>
+            <ComboBox SelectedValue="{Binding DataBits}" ItemsSource="{x:Static io:PortSettingConst.Databitses}"/>
+        </DockPanel>
+
+        <DockPanel>
+            <Label>奇偶校验</Label>
+            <ComboBox SelectedValue="{Binding Parity}" ItemsSource="{x:Static io:PortSettingConst.Paritys}" />
+        </DockPanel>
+        <DockPanel>
+            <Label>停止位</Label>
+            <ComboBox SelectedValue="{Binding StopBits}" ItemsSource="{x:Static io:PortSettingConst.StopBitses}" />
+        </DockPanel>
+        <DockPanel>
+            <Label>流控制</Label>
+            <ComboBox SelectedValue="{Binding Handshake}" ItemsSource="{x:Static io:PortSettingConst.Handshakes}"/>
+        </DockPanel>
+        <StackPanel Orientation="Horizontal" Margin="76 0 0 0">
+            <CheckBox IsChecked="{Binding Dtr}" Margin="4">DTR</CheckBox>
+            <CheckBox IsChecked="{Binding Rts}" Margin="4">RTS</CheckBox>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

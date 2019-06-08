@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net4;net45</TargetFrameworks>
+    <RootNamespace>Lingya</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>zwq00000@gmail.com</Authors>
+    <Company>Lingya Tech CO.</Company>
+    <Description>Serial Settings and Setting View Control</Description>
+    <RepositoryUrl>https://github.com/zwq00000/Lingya.IO.Serial</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/zwq00000/Lingya.IO.Serial</PackageProjectUrl>
+    <PackageTags>Serial</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\PortSettingControl.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="IO\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PortSettingControl.xaml.cs">
+      <DependentUpon>PortSettingControl.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="IO\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="Views\PortSettingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+
+</Project>
