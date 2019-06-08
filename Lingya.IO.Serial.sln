@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lingya.IO.Serial", "src\Lin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lingya.IO.Serial.Tests", "test\Lingya.IO.Serial.Tests\Lingya.IO.Serial.Tests.csproj", "{80B00EFF-606A-4263-8C6B-840E04151EFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lingya.IO.Serial.Settings", "src\Lingya.IO.Serial.Settings\Lingya.IO.Serial.Settings.csproj", "{116551B9-DFDE-4B4A-A700-9A009D1DF8AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{80B00EFF-606A-4263-8C6B-840E04151EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80B00EFF-606A-4263-8C6B-840E04151EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80B00EFF-606A-4263-8C6B-840E04151EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116551B9-DFDE-4B4A-A700-9A009D1DF8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116551B9-DFDE-4B4A-A700-9A009D1DF8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116551B9-DFDE-4B4A-A700-9A009D1DF8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116551B9-DFDE-4B4A-A700-9A009D1DF8AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,7 @@ namespace Lingya.Views {
     /// </summary>
     public partial class PortSettingControl : UserControl {
         public PortSettingControl() {
-            InitializeComponent();
+            
         }
     }
 }
