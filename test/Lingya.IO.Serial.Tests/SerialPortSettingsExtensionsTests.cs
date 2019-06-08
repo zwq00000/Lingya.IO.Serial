@@ -4,6 +4,7 @@ using Lingya.Views;
 using Xunit;
 
 namespace Lingya.IO.Serial.Tests {
+#if DEBUG
     public class SerialPortSettingsExtensionsTests {
 
         [Fact]
@@ -39,4 +40,5 @@ namespace Lingya.IO.Serial.Tests {
         }
 
     }
+#endif
 }

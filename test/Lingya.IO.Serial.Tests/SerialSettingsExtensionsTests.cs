@@ -2,7 +2,10 @@ using System.IO.Ports;
 using Xunit;
 
 namespace Lingya.IO.Serial.Tests {
-    public class ExtensionsTests {
+#if DEBUG
+
+    public class SerialSettingsExtensionsTests {
+
         [Fact]
         public void TestExpression() {
             var settings = new SerialPortSetting();
@@ -14,4 +17,5 @@ namespace Lingya.IO.Serial.Tests {
             Assert.Equal(7,settings.DataBits);
         }
     }
+#endif
 }
