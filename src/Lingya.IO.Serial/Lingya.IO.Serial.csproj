@@ -10,8 +10,17 @@
     <RepositoryUrl>https://github.com/zwq00000/Lingya.IO.Serial</RepositoryUrl>
     <PackageProjectUrl>https://github.com/zwq00000/Lingya.IO.Serial</PackageProjectUrl>
     <PackageTags>Serial</PackageTags>
+    <Version>1.0.0</Version>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseUrl>http://www.apache.org/licenses/</PackageLicenseUrl>
   </PropertyGroup>
-
+  
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+  
   <ItemGroup>
     <None Remove="Views\PortSettingControl.xaml" />
   </ItemGroup>
